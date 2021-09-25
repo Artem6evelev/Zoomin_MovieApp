@@ -14,4 +14,5 @@ const FetchData = (props) => {
   }, []);
   return <div></div>;
 };
+
 export default FetchData;
