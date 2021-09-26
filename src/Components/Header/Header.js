@@ -1,20 +1,16 @@
 import React from "react";
+import "./Header.css";
 import { useHistory } from "react-router-dom";
-
-import "./Header.styles.css";
 
 export default function Header(props) {
   const { favoriteList } = props;
   let history = useHistory();
-
   const onClickLogo = () => {
     history.push("/");
   };
-
   const onClickFavorite = () => {
     history.push("/MyFavoriteList");
   };
-
   let counter = 0;
   const getNumberOfFavoriteMovies = () => {
     if (favoriteList) {
@@ -26,7 +22,6 @@ export default function Header(props) {
       return <span> ( {counter} )</span>;
     }
   };
-
   return (
     <div className="header">
       <img
@@ -40,7 +35,7 @@ export default function Header(props) {
         <img
           alt=""
           className="header__img"
-          src={process.env.PUBLIC_URL + `movie.png`}
+          src={process.env.PUBLIC_URL + `fullstar.png`}
         ></img>
       </div>
     </div>
